@@ -84,13 +84,19 @@
         <StackLayout>
             <GridLayout rows=" *, auto" height="100%">
                 <page-router-outlet row="0"></page-router-outlet>
-                <StackLayout dock="bottom" row="1" orientation="horizontal" horizontalAlignment="center">
-                    <Button class="fas" dock="bottom" [nsRouterLink]="['/perfil']" text="&#xf007;"></Button>
-                    <Button class="fas" dock="bottom" [nsRouterLink]="['/tienda_virtual']" text="&#xf54f;"></Button>
-                    <Button class="fas" dock="bottom" [nsRouterLink]="['/home']" text="&#xf015;"></Button>
-                    <Button class="fas" dock="bottom" [nsRouterLink]="['/carrito']" text="&#xf07a;"></Button>
+                <StackLayout>
+                    <GridLayout rows=" *, auto" height="100%">
+                        <page-router-outlet row="0"></page-router-outlet>
+                        <StackLayout dock="bottom" row="1" orientation="horizontal" horizontalAlignment="center">
+                            <Button class="fas" dock="bottom" [nsRouterLink]="['/perfil']" text="&#xf007;"></Button>
+                            <Button class="fas" dock="bottom" [nsRouterLink]="['/tienda']" text="&#xf54f;"></Button>
+                            <Button class="fas" dock="bottom" [nsRouterLink]="['/home']" text="&#xf015;"></Button>
+                            <Button class="fas" dock="bottom" [nsRouterLink]="['/carrito']" text="&#xf07a;"></Button>
+                        </StackLayout>
+                    </GridLayout>
                 </StackLayout>
             </GridLayout>
         </StackLayout>
     </StackLayout>
 </ScrollView>
+
