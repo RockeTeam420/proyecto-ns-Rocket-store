@@ -1,0 +1,46 @@
+<ActionBar>
+    <Label text="INICIAR SESIÓN"></Label>
+</ActionBar>
+
+<DockLayout stretchLastChild="true" padding="10" backgroundImage="~/app/images/fondo.jpg">
+    <Label text="" dock="left" width="40"></Label>
+    <Label text="" dock="top" height="40"></Label>
+    <Label text="" dock="right" width="40"></Label>
+    <Label text="" dock="bottom" height="40"></Label>
+    
+    <StackLayout backgroundColor="#d2d3cd">
+        <Image src="~/app/images/logodefinitivo1.png"></Image>
+        <StackLayout>
+            <Label class="fas" text="&#xf007;  INICIAR SESIÓN" style="text-align: center; font-size:15%;" height="50" backgroundColor="#c2c2c2"
+                fontWeight="bold"></Label>
+        </StackLayout>
+
+
+        <StackLayout class="form">
+            <StackLayout class="input-field">
+                <TextField class="fas" hint="&#xf0e0;  CORREO ELECTRONICO"
+                    style="background-color: white; text-align: center; border-radius: 10%; font-size:15%;" height="40"
+                    padding="10" />
+            </StackLayout>
+
+            <StackLayout class="input-field">
+                <TextField class="fas" hint="&#xf023; CONTRASEÑA" secure="true"
+                    style="background-color: white; text-align: center; border-radius: 10%; font-size:15%;" height="40"
+                    padding="10" />
+            </StackLayout>
+
+            <Button text="INICIAR SESIÓN" [nsRouterLink]="['/home']"
+                    style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                    fontWeight="bold"></Button> />
+        </StackLayout>
+        <FlexboxLayout class="page">
+            <StackLayout class="form">
+                ...
+            </StackLayout>
+
+            <label text="¿No tienes cuenta?" fontWeight="bold" [nsRouterLink]="['/registro']"></label>
+            <Button text="Regresar..." fontWeight="bold" [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Button>
+        </FlexboxLayout>
+
+    </StackLayout>
+</DockLayout>

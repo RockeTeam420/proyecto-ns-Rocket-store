@@ -1,0 +1,42 @@
+<ActionBar>
+  <Label text="ADSO"></Label>
+</ActionBar>
+
+<DockLayout stretchLastChild="true" padding="10" backgroundImage="~/app/images/fondo.jpg">
+  <Label text="" dock="left" width="20"></Label>
+  <Label text="" dock="top" height="20"></Label>
+  <Label text="" dock="right" width="20"></Label>
+  <Label text="" dock="bottom" height="20"></Label>
+  <StackLayout class="fondo" backgroundColor="#d2d3cd"  orientation="vertical" padding="20">
+    <Gridlayout columns="80,150,700" rows="40">
+      <label col="1" row="0" id="texto" text="JORDAN RETRO 3"></label>
+    </Gridlayout>
+    <Gridlayout class="fp" columns="150,150" rows="150,150" >
+      <img class="p1" col="0" row="0" src="~/app/images/brooklyn_nets.png" alt="producto1_1">
+      <img class="p1" col="1" row="0" src="~/app/images/brooklyn_nets.png" alt="producto1_2">
+      <img class="p1" col="0" row="1" src="~/app/images/brooklyn_nets.png" alt="producto1_3">
+      <img class="p1" col="1" row="1" src="~/app/images/brooklyn_nets.png" alt="producto1_4">
+    </Gridlayout>
+    <flexboxLayout align-items="center" orientation="vertical" padding="15">
+      <Gridlayout class="info_p" columns="90,100,110" rows="40,40,40,40">
+        <label class="texto" col="1" row="0">INFORMACION</label>
+        <label class="texto" col="0" row="1">PRECIO:</label>
+        <label class="texto" col="2" row="1">$150.000</label>
+        <label class="texto" col="0" row="2">CANTIDAD:</label>
+        <FlexBoxLayout col="2" row="2" class="picker">
+          <textField hint="Cantidad" type="number">
+          </textField>
+        </FlexBoxLayout>
+        <label class="texto" col="0" row="3">COLOR</label>
+        <label class="texto" col="2" row="3">ROJO</label>
+      </Gridlayout>
+    </flexboxLayout>
+    <StackLayout>
+      <Button class="comprar" col="1" row="4" text="COMPRAR"></Button>
+    </StackLayout>
+    <flexboxLayout flex-direction: row; class="bajo">
+      <Button [nsRouterLink]="['/tienda']" class="regresar" col="1" row="4" text="REGRESAR"></Button>
+      <Button class="fas" text="&#xf217;"[nsRouterLink]="['/carrito']"></Button>
+    </flexboxLayout>
+  </StackLayout>
+</DockLayout>

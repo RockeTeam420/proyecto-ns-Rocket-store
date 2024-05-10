@@ -1,0 +1,81 @@
+<ActionBar>
+    <SearchBar hint="Buscar Productos..." />
+    <NavigationButton text="Go back" android.systemIcon="ic_menu_back" (tap)="onTap()" />
+</ActionBar>
+
+<ScrollView>
+    <StackLayout>
+        <label text="PRODUCTOS" color="black" id="tit2" height="60" class="texto_centrado"></label>
+        <FlexboxLayout flexWrap="wrap" justifyContent="space-around" class="p-15 m-t-20">
+            <StackLayout class="p-5 m-l-15 m-r-15 m-b-15 text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                <Image src="~/app/images/brooklyn_nets.png"></Image>
+                <Label class="h2" text="CONJUNTO JORDAN" textWrap="true"></Label>
+                <Label class="h3" text="Precio: $310.000"></Label>
+                <Button text="COMPRAR" [nsRouterLink]="['/productos']"
+                style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                fontWeight="bold"></Button> />
+            </StackLayout>
+            <StackLayout class="p-5 m-l-15 m-r-15 m-b-15 text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                <Image src="~/app/images/calcetas.png"></Image>
+
+                <Label class="h2" text="CALCETAS NIKE" textWrap="true"></Label>
+                <Label class="h3" text="Precio: $21.000"></Label>
+                <Button text="COMPRAR" [nsRouterLink]="['/productos']"
+                style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                fontWeight="bold"></Button> />
+            </StackLayout>
+            <StackLayout class="p-5 m-l-15 m-r-15 m-b-15 text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                <Image src="~/app/images/brooklyn_nets.png"></Image>
+
+                <Label class="h2" text="CONJUNTO JORDAN" textWrap="true"></Label>
+                <Label class="h3" text="Precio: $31.000"></Label>
+                <Button text="COMPRAR" [nsRouterLink]="['/productos']"
+                style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                fontWeight="bold"></Button> />
+            </StackLayout>
+            <StackLayout class="p-5 m-l-15 m-r-15 m-b-15 text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                <Image src="~/app/images/calcetas.png"></Image>
+
+                <Label class="h2" text="CALCETAS NIKE" textWrap="true"></Label>
+                <Label class="h3" text="Precio: $21.000"></Label>
+                <Button text="COMPRAR" [nsRouterLink]="['/productos']"
+                style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                fontWeight="bold"></Button> />
+            </StackLayout>
+            <StackLayout class="p-5 m-l-15 m-r-15 m-b-15 text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                <Image src="~/app/images/brooklyn_nets.png"></Image>
+
+                <Label class="h2" text="CONJUNTO JORDAN" textWrap="true"></Label>
+                <Label class="h3" text="Precio: $310.000"></Label>
+                <Button text="COMPRAR" [nsRouterLink]="['/productos']"
+                style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                fontWeight="bold"></Button> />
+            </StackLayout>
+            <StackLayout class="p-5 m-l-15 m-r-15 m-b-15 text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                <Image src="~/app/images/jordan.png"></Image>
+
+                <Label class="h2" text="BUZO JORDAN" textWrap="true"></Label>
+                <Label class="h3" text="Precio: $200.000"></Label>
+                <Button text="COMPRAR" [nsRouterLink]="['/productos']"
+                style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                fontWeight="bold"></Button> />
+            </StackLayout>
+        </FlexboxLayout>
+        <GridLayout rows=" *, auto" height="100%" class="nose">
+
+            <page-router-outlet row="0"></page-router-outlet>
+
+            <StackLayout backgroundColor="#d2d3cd">
+                <GridLayout rows=" *, auto" height="100%">
+                    <page-router-outlet row="0"></page-router-outlet>
+                    <StackLayout dock="bottom" row="1" orientation="horizontal" horizontalAlignment="center">
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/perfil']" text="&#xf007;"></Button>
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/tienda']" text="&#xf54f;"></Button>
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/productos']" text="&#xf015;"></Button>
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/carrito']" text="&#xf07a;"></Button>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </GridLayout>
+    </StackLayout>
+</ScrollView>

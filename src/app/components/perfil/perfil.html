@@ -1,0 +1,38 @@
+<ActionBar>
+  <Label text="Perfil"></Label>
+  <NavigationButton text="Go back" android.systemIcon="ic_menu_back" (tap)="onTap()" />
+</ActionBar>
+
+<StackLayout>
+  <StackLayout>
+    <Image src="~/app/images/fotoperfil.jpg" style="border-radius: 100%;" width="60%"></Image>
+    <Label class="texto_centrado" text="" height="20"></Label>
+    <Label class="texto_centrado" text="Juan Pablo Chavarriaga" dock="left" width="500" backgroundColor="#FDEEE1"
+      height="50" style="border-radius: 100%;"></Label>
+    <Label class="texto_centrado" text="" height="20"></Label>
+    <Label class="texto_centrado" text="3043673873" dock="left" width="500" backgroundColor="#FDEEE1" height="50"
+      style="border-radius: 100%;"></Label>
+    <Label class="texto_centrado" text="" height="20"></Label>
+    <Label class="texto_centrado" text="juanpmontoya664@gmail.com" dock="left" width="500" backgroundColor="#FDEEE1"
+      height="50" style="border-radius: 100%;"></Label>
+    <Label class="texto_centrado" text="" height="20"></Label>
+    <Label class="texto_centrado" text="Calle 76 #89,850" dock="left" width="500" backgroundColor="#FDEEE1" height="50"
+      style="border-radius: 100%;"></Label>
+    <GridLayout rows=" *, auto" height="100%" class="nose">
+
+      <page-router-outlet row="0"></page-router-outlet>
+
+      <StackLayout backgroundColor="#d2d3cd">
+        <GridLayout rows=" *, auto" height="100%">
+          <page-router-outlet row="0"></page-router-outlet>
+          <StackLayout dock="bottom" row="1" orientation="horizontal" horizontalAlignment="center">
+            <Button class="fas" dock="bottom" [nsRouterLink]="['/perfil']" text="&#xf007;"></Button>
+            <Button class="fas" dock="bottom" [nsRouterLink]="['/tienda']" text="&#xf54f;"></Button>
+            <Button class="fas" dock="bottom" [nsRouterLink]="['/home']" text="&#xf015;"></Button>
+            <Button class="fas" dock="bottom" [nsRouterLink]="['/carrito']" text="&#xf07a;"></Button>
+          </StackLayout>
+        </GridLayout>
+      </StackLayout>
+    </GridLayout>
+  </StackLayout>
+</StackLayout>

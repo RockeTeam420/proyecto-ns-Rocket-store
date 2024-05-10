@@ -1,0 +1,83 @@
+<ActionBar>
+    <label class="fas" text="&#xf07a; CARRITO"> </label>
+    <NavigationButton text="Go back" android.systemIcon="ic_menu_back" (tap)="onTap()" />
+</ActionBar>
+
+<ScrollView>
+    <DockLayout stretchLastChild="true">
+        <FlexboxLayout flexDirection="column" justifyContent="space-between" >
+            <StackLayout>
+                <FlexboxLayout class="tarjeta_tin" flexDirection="column" backgroundColor="lightgray">
+                    <FlexboxLayout width="100%">
+                        <Image src="~/app/images/brooklyn_nets.png" width="150"></Image>
+                        <StackLayout backgroundColor="lightgray" width="100%">
+                            <Label class="texto_centrado" style="margin: 40px;" text="CONJUNTO JORDAN"
+                                textWrap="true"></Label>
+                            <Label class="texto_centrado" text="Precio: $310.000"></Label>
+                            <Button text="Eliminar" backgroundColor="red"></Button>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+
+                <FlexboxLayout class="tarjeta_tin" flexDirection="column" backgroundColor="lightgray">
+                    <FlexboxLayout width="100%">
+                        <Image src="~/app/images/brooklyn_nets.png" width="150"></Image>
+                        <StackLayout backgroundColor="lightgray" width="100%">
+                            <Label class="texto_centrado" style="margin: 40px;" text="CONJUNTO JORDAN"
+                                textWrap="true"></Label>
+                            <Label class="texto_centrado" text="Precio: $310.000"></Label>
+                            <Button text="Eliminar" backgroundColor="red"></Button>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+
+                <FlexboxLayout class="tarjeta_tin" flexDirection="column" backgroundColor="lightgray">
+                    <FlexboxLayout width="100%">
+                        <Image src="~/app/images/brooklyn_nets.png" width="150"></Image>
+                        <StackLayout backgroundColor="lightgray" width="100%">
+                            <Label class="texto_centrado" style="margin: 40px;" text="CONJUNTO JORDAN"
+                                textWrap="true"></Label>
+                            <Label class="texto_centrado" text="Precio: $310.000"></Label>
+                            <Button text="Eliminar" backgroundColor="red"></Button>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+
+                <FlexboxLayout class="tarjeta_tin" flexDirection="column" backgroundColor="lightgray">
+                    <FlexboxLayout width="100%">
+                        <Image src="~/app/images/brooklyn_nets.png" width="150"></Image>
+                        <StackLayout backgroundColor="lightgray" width="100%">
+                            <Label class="texto_centrado" style="margin: 40px;" text="CONJUNTO JORDAN"
+                                textWrap="true"></Label>
+                            <Label class="texto_centrado" text="Precio: $310.000"></Label>
+                            <Button text="Eliminar" backgroundColor="red"></Button>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+                <FlexboxLayout class="tarjeta_tin" flexDirection="column" backgroundColor="lightgray">
+                    <FlexboxLayout width="100%">
+                        <Image src="~/app/images/brooklyn_nets.png" width="150"></Image>
+                        <StackLayout backgroundColor="lightgray" width="100%">
+                            <Label class="texto_centrado" style="margin: 40px;" text="CONJUNTO JORDAN"
+                                textWrap="true"></Label>
+                            <Label class="texto_centrado" text="Precio: $310.000"></Label>
+                            <Button text="Eliminar" backgroundColor="red"></Button>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+            </StackLayout>
+            <!-- Footer -->
+            <StackLayout>
+                <GridLayout rows=" *, auto" height="100%">
+                    <page-router-outlet row="0"></page-router-outlet>
+                    <StackLayout dock="bottom" row="1" orientation="horizontal" horizontalAlignment="center">
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/perfil']" text="&#xf007;"></Button>
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/tienda']" text="&#xf54f;"></Button>
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/home']" text="&#xf015;"></Button>
+                        <Button class="fas" dock="bottom" [nsRouterLink]="['/carrito']" text="&#xf07a;"></Button>
+                    </StackLayout>
+                </GridLayout>
+            </StackLayout>
+        </FlexboxLayout>
+    </DockLayout>
+</ScrollView>
