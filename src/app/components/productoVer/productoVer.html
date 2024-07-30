@@ -1,0 +1,29 @@
+<GridLayout rows=" 130 250 500" backgroundColor="#fcf9ee" >
+
+    <StackLayout justifyContent="center" row="0">
+        <StackLayout backgroundColor="#fcf9ee" justifyContent="center">
+            <FlexboxLayout class="nav">
+                <AbsoluteLayout position="relative">
+                    <Image src="~/app/images/logodefinitivo1.png"></Image>
+                    
+                </AbsoluteLayout>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout row="1">
+        <AbsoluteLayout position="relative" *ngIf="details">
+            <image [src]="details.foto" class="img_usuario"></image>
+        </AbsoluteLayout>
+    </StackLayout>
+    <StackLayout row="2" *ngIf="details">
+        <label class="centrado_titulo" text="Producto:"></label>
+        <label class="centrado" text="{{ details.nombre }}"></label>
+        <label class="centrado_titulo" text="Precio"></label>
+        <label class="centrado" text="{{ details.precio }}"></label>
+        <label class="centrado_sesion" text="¿Desea añadir al carrito de compra?"></label> 
+        <FlexboxLayout justifyContent="center">
+            <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf060;" (tap)="back()" ></button>
+            <button id="detalle" class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf217;" ></button>
+        </FlexboxLayout>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,97 @@
+#main {
+    padding-top: 300px;
+    background-color: #f3f5f6;
+}
+
+#header {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    justify-content: space-between;
+}
+
+#title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.btn {
+    border-radius: 15px;
+    padding: 0 25px;
+    font-weight: medium;
+    font-size: 16px;
+}
+
+.container-btns {
+    justify-content: center;
+}
+
+#btn-google {
+    color: black;
+    border-radius: 12px;
+}
+
+#btn-facebook {
+    background: #1746a5e1;
+    color: white;
+    border-radius: 12px;
+}
+
+#form {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.TextField {
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 16px 10px;
+    background-color: white;
+}
+
+.input-password {
+    border-color: #b3b2b2;
+    border-radius: 10px;
+    margin: 0 15px;
+}
+
+.input-password .TextField {
+    background-color: transparent;
+    border-width: 0;
+    padding: 10px 0;
+}
+
+.input-password Label {
+    padding: 0 10px;
+}
+
+#link-password {
+    color: gray;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-self: center;
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+.btn-login {
+    color: white;
+    background-color: gray;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#footer {
+    margin-top: 200px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    background-color: gray;
+    color: white;
+    border-radius: 50%;
+}

@@ -1,0 +1,38 @@
+<StackLayout backgroundColor="#232323">
+
+  <StackLayout justifyContent="center">
+    <StackLayout backgroundColor="#fcf9ee" justifyContent="center" class="nav">
+      <FlexboxLayout class="nav">
+        <AbsoluteLayout position="relative">
+          <FlexboxLayout class="botones_nav">
+            <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf015;" (tap)="onTap()"></button>
+            <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf07a;" (tap)="productos()"></button>
+            <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf007;" (tap)="perfil()"></button>
+          </FlexboxLayout>
+        </AbsoluteLayout>
+      </FlexboxLayout>
+    </StackLayout>
+    <button class="gestion" backgroundColor="#b3b2b2" text="Gestion de productos" (tap)="gestion()"></button>
+    <FlexboxLayout>
+      <SearchBar class="busqueda" hint="Buscar ... " marginBottom="10" />
+      <Button [nsRouterLink]="['/carrito']" pageTransition="slide" id="vercarrito" class="fas" text="&#xf218; ver" backgroundColor="#b3b2b2" color="white"></Button>
+    </FlexboxLayout>
+    
+  </StackLayout>
+
+  <ScrollView>
+
+    <StackLayout>
+      <AbsoluteLayout position="relative" class="contenedor_productos" *ngFor="let producto of productos1" id="card" class="p-5 m-l-15 m-r-15 m-b-15 text-center">
+        <Image class="fondo_producto" ></Image>
+        <Image class="producto_img" [src]="producto.foto"></Image>
+        <label class="producto_precio" text="{{ producto.precio }}"></label>
+        <label class="info_producto" text=" {{ producto.nombre }}"></label>
+        <button id="comprar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf217;" (tap)='addToCart(producto)' ></button>
+        <button id="detalle" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;" (tap)="showDetail(producto.id)"></button>
+      </AbsoluteLayout>
+    </StackLayout>
+
+  </ScrollView>
+
+</StackLayout>

@@ -1,0 +1,49 @@
+<ScrollView>
+    <StackLayout id="main">
+        <Image src="~/app/images/logodefinitivo1.png" width="50%"></Image>
+        <FlexboxLayout id="header">
+            <Label id="title" text="Iniciar Sesión" class="header-items"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout id="form">
+            <TextField
+                required
+                hint="Nombre de Usuario"
+                (textChange)="inputChange($event, 'nombre')"
+            ></TextField>
+            <GridLayout rows="auto, auto" columns="*, auto" class="input-password">
+                <TextField
+                    #passwordField
+                    row="0"
+                    secure="true"
+                    colSpan="2"
+                    required
+                    hint="Contraseña"
+                    (loaded)="textFieldLoaded($event)"
+                    (textChange)="inputChange($event, 'password')"
+                ></TextField>
+                <Label
+                    (tap)="togglePasswordVisibility()"
+                    class="fas"
+                    row="0"
+                    col="1"
+                    text="&#xf070;"
+                    [visibility]="passwordVisible ? 'visible' : 'collapse'"
+                ></Label>
+                <Label
+                    (tap)="togglePasswordVisibility()"
+                    class="fas"
+                    row="0"
+                    col="1"
+                    text="&#xf06e;"
+                    [visibility]="!passwordVisible ? 'visible' : 'collapse'"
+                ></Label>
+            </GridLayout>
+            <Label id="link-password" text="¿Olvidaste tu contraseña?"></Label>
+            <Button (tap)="loguear()" class="btn-login" text="Iniciar sesión"></Button>
+        </FlexboxLayout>
+        <FlexboxLayout id="footer">
+            <Label text="¿No tienes una cuenta?"></Label>
+            <Button class="boton" text="Registrarse" nsRouterLink="/registro" (tap)="onRegister()"></Button>
+        </FlexboxLayout>
+    </StackLayout>
+</ScrollView>

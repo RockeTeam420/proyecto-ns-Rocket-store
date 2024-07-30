@@ -1,0 +1,29 @@
+<ActionBar>
+  <Label text="ROCKET STORE🚀"></Label>
+</ActionBar>
+
+<ScrollView>
+  <DockLayout backgroundImage="~/app/images/fondo.jpg" stretchLastChild="true" padding="10">
+    <Label text="" dock="left" width="40"></Label>
+    <Label text="" dock="top" height="40"></Label>
+    <Label text="" dock="right" width="40"></Label>
+    <Label text="" dock="bottom" height="40"></Label>
+    <StackLayout>
+      <Image src="~/app/images/logodefinitivo1.png"></Image>
+      <Label class="texto_centrado" text="" height="20"></Label>
+      <Button text="Registrarse" [nsRouterLink]="['/registro']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Iniciar Sesión" (tap)="onLogin()" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Pagina principal" [nsRouterLink]="['/principal']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Carrito" [nsRouterLink]="['/carrito']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Catálogo" [nsRouterLink]="['/catalogo']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Gestión" [nsRouterLink]="['/gestion']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Productos" [nsRouterLink]="['/productos']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Tienda virtual" [nsRouterLink]="['/tienda']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Perfil" [nsRouterLink]="['/perfil']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Acerca de nosotros" [nsRouterLink]="['/home']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Prueba" [nsRouterLink]="['/prueba']" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="cerrar" (tap)="cerrar()" pageTransition="slide" clearHistory="true"></Button>
+      <Button text="Salir" (tap)="onExit()"></Button>
+    </StackLayout>
+  </DockLayout>
+</ScrollView>

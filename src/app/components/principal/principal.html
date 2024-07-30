@@ -1,0 +1,32 @@
+<ActionBar>
+    <link rel="stylesheet" href="catalogo.css">
+    <Label text="Rocket Store🚀"></Label>
+    <NavigationButton text="Go back" android.systemIcon="ic_menu_back" (tap)="onTap()" />
+</ActionBar>
+
+<ScrollView>
+    <DockLayout stretchLastChild="true" backgroundColor="#d2d3cd" height="100%">
+        <GridLayout dock="bottom" columns="*, auto" height="50">
+            <page-router-outlet row="0"></page-router-outlet>
+            <StackLayout row="1" orientation="horizontal" horizontalAlignment="center">
+                <Button class="fas" [nsRouterLink]="['/perfil']" text="&#xf007;"></Button>
+                <Button class="fas" [nsRouterLink]="['/principal']" text="&#xf54f;"></Button>
+                <Button class="fas" [nsRouterLink]="['/home']" text="&#xf015;"></Button>
+                <Button class="fas" [nsRouterLink]="['/carrito']" text="&#xf07a;"></Button>
+            </StackLayout>
+        </GridLayout>
+        <ScrollView>
+            <FlexboxLayout flexWrap="wrap" justifyContent="space-around"> 
+                <FlexboxLayout *ngFor="let producto of productos">
+                    <StackLayout class="text-center" id="info_p" backgroundColor="lightgray" width="420px">
+                        <Image src="{{ producto.foto }}"></Image>
+                        <Label class="h2" text="{{ producto.nombre }}" textWrap="true"></Label>
+                        <Label class="h3" text=" {{ producto.precio }} $"></Label>
+                        <Label text="Unidades Disponibles: {{ producto.inventario }}" textWrap="true"></Label>
+                        <Button text="COMPRAR" [nsRouterLink]="['/productos']" style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;" fontWeight="bold"></Button>
+                    </StackLayout>
+                </FlexboxLayout>
+            </FlexboxLayout>
+        </ScrollView>    
+    </DockLayout>
+</ScrollView>

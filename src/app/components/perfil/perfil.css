@@ -1,0 +1,41 @@
+button{
+    border-radius: 15%;
+}
+.completo_nav{ /*estos son los settings de los btns nav */
+    margin-left: 11%;
+    margin-top: 20%;
+}
+.divisor{
+    background-color: #CA2141;
+    height:15%;
+    width: 100%;    
+    margin-top: 50%;
+}
+.img_usuario{
+    border-radius: 100%;
+    width: 30%;
+    margin-top: 35%;
+    margin-left: 35%;
+}
+.img{
+    margin-top: 40%;
+    transform: scaleY(-1);
+}
+
+.centrado{
+    color: black;
+    text-align: center;
+}
+.centrado_titulo{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20%;
+    margin-top: 5%;
+}
+.centrado_sesion{
+    margin-top: 25%;
+    text-align: center;
+    color: black;
+}

@@ -1,0 +1,59 @@
+<ActionBar>
+    <Label text="REGISTRARSE"></Label>
+    <NavigationButton text="Go back" android.systemIcon="ic_menu_back" (tap)="onTap()" />
+</ActionBar>
+
+<DockLayout stretchLastChild="true" padding="10" backgroundImage="~/app/images/fondo.jpg">
+    <!-- Margen alrededor del contenido -->
+    <Label text="" dock="left" width="40"></Label>
+    <Label text="" dock="top" height="40"></Label>
+    <Label text="" dock="right" width="40"></Label>
+    <Label text="" dock="bottom" height="40"></Label>
+
+    <!-- Contenedor principal -->
+    <StackLayout backgroundColor="#d2d3cd">
+        <Image src="~/app/images/logodefinitivo1.png"></Image>
+
+        <StackLayout>
+            <Label class="fas" text="&#xf007;  REGISTRARSE" style="text-align: center; font-size:15%;" height="50"
+                backgroundColor="#c2c2c2" fontWeight="bold"></Label>
+        </StackLayout>
+
+        <!-- FlexboxLayout contenedor de los campos de formulario -->
+        <FlexboxLayout class="page" flexDirection="column" alignItems="center">
+            <StackLayout class="forms" width="90%" backgroundColor="#ffffff" padding="10" borderRadius="10">
+                <TextField class="fas" hint="&#xf007;  NOMBRE DE USUARIO" (textChange)="inputChange($event, 'nombre')"
+                    style="background-color: white; text-align: center; border-radius: 10%; font-size:15%;"
+                    height="40" padding="10" fontWeight="100" ></TextField>
+
+                <TextField class="fas" hint="&#xf0e0;  CORREO ELECTRONICO" (textChange)="inputChange($event, 'correo')"
+                    style="background-color: white; text-align: center; border-radius: 10%; font-size:15%;"
+                    height="40" padding="10" />
+
+                <TextField class="fas" hint="&#xf023; Minimo 5 caracteres" secure="true" (loaded)="textFieldLoaded($event, 'password')" (textChange)="inputChange($event, 'password')"
+                    style="background-color: white; text-align: center; border-radius: 10%; font-size:15%;"
+                    height="40" padding="10" />
+
+                <TextField class="fas" hint="&#xf023; CONFIRMAR CONTRASEÑA" secure="true" (loaded)="textFieldLoaded($event, 'confirmPassword')" (textChange)="inputChange($event, 'confirmPassword')"
+                    style="background-color: white; text-align: center; border-radius: 10%; font-size:15%;"
+                    height="40" padding="10" fontWeight="normal" />
+
+                <Label text="¿DESEAS NOTIFICACIONES DE PRODUCTOS?"></Label>
+                <Label text="¿YA TIENES CUENTA? INICIAR SESION" fontWeight="bold"></Label>
+
+                <!-- Contenedor para el Switch y el Label -->
+                <FlexboxLayout flexDirection="row" alignItems="center" justifyContent="space-between">
+                    <Switch color="#BFCDAC" backgroundColor="green" offBackgroundColor="#DC493D" [(ngModel)]="isAcceptTermin" (checkedChange)="onSwitchChange($event)" ></Switch>
+                    <Label (tap)="abrirTyC()" text="Aceptar Términos y Condiciones"></Label>
+                </FlexboxLayout>
+
+                <Button text="CREAR CUENTA" [nsRouterLink]="['/home']" (tap)="registrarse()"
+                    style="color: white; background-color: rgb(255, 0, 0); border-radius: 10%;"
+                    fontWeight="bold"></Button>
+                <Button text="REGRESAR" [nsRouterLink]="['/home']"
+                    style="color: white; background-color: rgb(0, 0, 0); border-radius: 10%;"
+                    fontWeight="bold"></Button>
+            </StackLayout>
+        </FlexboxLayout>
+    </StackLayout>
+</DockLayout>

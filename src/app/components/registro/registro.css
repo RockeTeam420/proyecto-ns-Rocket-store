@@ -1,0 +1,24 @@
+.page{
+    margin-top: 25rem;
+    align-items:end;
+    text-align:center;
+    flex-direction: column;
+}
+
+.fas{
+    background-color: white; 
+    text-align: center;  
+    border-radius: 10%; 
+    font-size:15%;
+    height: 40px; 
+    padding: 10px; 
+}
+
+.input-password{
+    background-color: white; 
+    text-align: center;  
+    border-radius: 10%; 
+    font-size:15%;
+    height: 40px; 
+    padding: 10px; 
+}

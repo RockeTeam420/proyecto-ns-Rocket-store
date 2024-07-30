@@ -1,0 +1,59 @@
+<StackLayout backgroundColor="#232323">
+
+    <StackLayout justifyContent="center">
+        <StackLayout backgroundColor="#fcf9ee" justifyContent="center" class="nav">
+            <FlexboxLayout class="nav">
+                <AbsoluteLayout position="relative">
+                    <Image src="~/app/images/fondo_nav2.png"></Image>
+                    <FlexboxLayout class="botones_nav">
+                        <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf015;"
+                            (tap)="onTap()"></button>
+                        <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf07a;"
+                            (tap)="productos()"></button>
+                        <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf007;"
+                            (tap)="perfil()"></button>
+                    </FlexboxLayout>
+                </AbsoluteLayout>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+
+    <SegmentedBar [items]="mySegmentedBarItems" selectedIndex="0" (selectedIndexChange)="onSelectedIndexChange($event)">
+    </SegmentedBar>
+
+    <StackLayout [visibility]="ver_item0 ? 'visible' : 'collapsed'">
+        <SearchBar class="busqueda" hint="Buscar ... " margin="10" />
+        <ScrollView>
+            <StackLayout>
+                <AbsoluteLayout position="relative" class="contenedor_productos">
+                    <Image class="fondo_producto" ></Image>
+                    <Image class="producto_img" src=" ~/app/images/calcetas.png"></Image>
+                    <label class="info_producto" text=" Llantas pirelli"></label>
+                    <button id="borrar" class="fas" backgroundColor="#CA2141" color="white" text="&#xf1f8;"></button>
+                    <button id="editar" class="fas" backgroundColor="#4cc978" color="white" text="&#xf044;"></button>
+                    <button id="ver" class="fas" backgroundColor="#44B1D0" color="white" text="&#xf06e;"></button>
+                </AbsoluteLayout>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+    <StackLayout [visibility]="ver_item1 ? 'visible' : 'collapsed'">
+        <label class="titulo"  text="CREAR NUEVO PRODUCTO"  ></label>
+        <label class="labels" color="white" text="Nombre del producto"></label>
+        <textField class="inputs" > </textField>
+        <label class="labels" text="Precio por unidad"></label>
+        <textField class="inputs" > </textField>
+        <label class="labels" text="Descripcion del producto"></label>
+        <textField class="inputs"  > </textField>
+        <label class="labels" text="Cantidad disponible"></label>
+        <textField class="inputs"  > </textField>
+        <label class="labels" text="categoria"></label>
+        <textField class="inputs"  > </textField>
+
+        <button id="agregar" class="fas" backgroundColor="#b3b2b2" color="white" text="Añadir producto" (tap)='addProduct(producto)' ></button>
+
+    </StackLayout>
+
+
+
+</StackLayout>

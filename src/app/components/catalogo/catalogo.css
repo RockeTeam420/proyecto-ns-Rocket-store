@@ -1,0 +1,12 @@
+Image {
+    height: 10%;
+    align-items: flex-end;
+}
+
+#lista {
+    width: 50%;
+}
+
+#tap{
+    font-size: 10%;
+}

@@ -1,0 +1,36 @@
+<GridLayout rows="130, 220, 400" backgroundColor="#fcf9ee">
+
+    <!-- Primer fila: Contenido de la cabecera -->
+    <StackLayout row="0" justifyContent="center">
+        <StackLayout backgroundColor="#fcf9ee" justifyContent="center">
+            <FlexboxLayout class="nav">
+                <!-- Contenedor para el perfil y los botones de navegación -->
+                <AbsoluteLayout>
+                    <FlexboxLayout class="completo_nav" flexDirection="row" justifyContent="space-around" alignItems="center">
+                        <!-- Botón de inicio -->
+                        <button class="fas" backgroundColor="#c2c2c2" color="white" text="&#xf015;" (tap)="onTap()"></button>
+                        <!-- Botón de productos -->
+                        <button class="fas" backgroundColor="#c2c2c2" color="white" text="&#xf07a;" (tap)="productos()"></button>
+                        <!-- Botón de perfil -->
+                        <button class="fas" backgroundColor="#c2c2c2" color="white" text="&#xf007;" (tap)="perfil()"></button>
+                    </FlexboxLayout>
+                </AbsoluteLayout>
+            </FlexboxLayout>
+        </StackLayout>
+    </StackLayout>
+
+    <Image class="img" src="~/app/images/default.jpg"></Image>
+
+    <!-- Tercer fila: Contenido del perfil de usuario -->
+    <StackLayout row="2" horizontalAlignment="center">
+        <label class="centrado_titulo" text="Usuario: "></label>
+        <label class="centrado" [text]="nombre"></label>
+        <label class="centrado_titulo" text="E-Mail"></label>
+        <label class="centrado" [text]="email"></label>
+        <label class="centrado_titulo" [text]="Contraseña"></label>
+        <label class="centrado_sesion" text="¿Desea cerrar sesión?"></label>
+        <!-- Botón para cerrar sesión -->
+        <button class="fas" backgroundColor="#c2c2c2" color="white" text="&#xf2f5;" (tap)="cerrar()" width="20%"></button>
+    </StackLayout>
+
+</GridLayout>

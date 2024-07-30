@@ -1,0 +1,33 @@
+<StackLayout backgroundColor="#232323">
+
+  <StackLayout justifyContent="center">
+    <StackLayout backgroundColor="#fcf9ee" justifyContent="center" class="nav">
+        <FlexboxLayout class="nav">
+            <AbsoluteLayout position="relative">
+                <FlexboxLayout class="botones_nav">
+                    <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf015;"
+                        (tap)="onTap()"></button>
+                    <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf07a;"
+                        (tap)="productos()"></button>
+                    <button class="fas" backgroundColor="#b3b2b2" color="white" text="&#xf007;"
+                        (tap)="perfil()"></button>
+                </FlexboxLayout>
+            </AbsoluteLayout>
+        </FlexboxLayout>
+    </StackLayout>
+  </StackLayout>
+
+  <StackLayout>
+    <ListView [items]="carrito">
+      <ng-template let-item="item" let-i="index">
+        <StackLayout>
+          <Label [text]="item.nombre"></Label>
+          <Label [text]="'$' + item.Precio"></Label>
+          <Image class="img" [src]="item.foto"></Image>
+          <Button text="Eliminar del carrito" (tap)="removeFromCart(index)"></Button>
+        </StackLayout>
+      </ng-template>
+    </ListView>
+    <Button class="vaciar" color="white" backgroundColor="#CA2141" text="Vaciar carrito" (tap)="clearCart()"></Button>
+  </StackLayout>
+</StackLayout>

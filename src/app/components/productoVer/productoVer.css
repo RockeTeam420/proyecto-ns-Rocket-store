@@ -1,0 +1,47 @@
+button{
+    border-radius: 15%;
+}
+.completo_nav{ /*estos son los settings de los btns nav */
+    margin-left: 11%;
+    margin-top: 20%;
+}
+.divisor{
+    background-color: #CA2141;
+    height:15%;
+    width: 100%;    
+    margin-top: 50%;
+}
+.img_usuario{
+    border-radius: 20%;
+    width: 70%;
+    margin-top: 20%;
+    margin-left: 15%;
+}
+.divisor_marco{
+    border-radius: 20%;
+    width: 34%;
+    height: 60%;
+    margin-top: 31%;
+    margin-left: 33%;
+    background-color: #CA2141;
+}
+.centrado{
+    color: black;
+    text-align: center;
+}
+.centrado_titulo{
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20%;
+    
+}
+.centrado_sesion{
+    margin-top: 25%;
+    text-align: center;
+    color: black;
+}
+#detalle{
+    width: 20%;
+}
